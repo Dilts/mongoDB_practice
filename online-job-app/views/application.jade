@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+	.container
+		h1 Job Application
+			.resume
+				ul#applications.list-unstyled
+					li.name #{prospect.name}
+					li.bio #{prospect.bio}
+					li.skills #{prospect.skills}
+					li.years #{prospect.years}
+					li.why #{prospect.why}

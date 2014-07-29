@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+		for prospect in applicant
+			ul#applications.list-unstyled
+				li: a.name(href='/resumeBuilder/#{prospect.id}') #{prospect.name}
+				li.bio #{prospect.bio}
+				li.skills #{prospect.skills}
+				li.years #{prospect.years}
+				li.why #{prospect.why}
+				li: a.remove(href='/deletedApplicant/#{prospect.id}')  Remove Applicant
